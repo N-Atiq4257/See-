@@ -82,4 +82,16 @@ ostream& operator<<(ostream& os, Person x){
   return os;
 }
 
+// input stream!
+istream& operator>>(istream& is, Person &x){
+  int age;
+  char fname[20], lname[20];
+  is >> fname >> lname >> age;
+  x.setAge(age);
+  x.setfname(fname);
+  x.setlname(lname);
+  
+  return is;
+}
+
 #endif
